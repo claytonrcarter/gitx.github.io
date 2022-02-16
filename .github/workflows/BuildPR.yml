@@ -1,0 +1,29 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    name: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.0
+      - name: Build
+        uses: actions/jekyll-build-pages@1.0.1
+        with:
+          source: .
+          destination: ./_site
+          future: false
+          verbose: true
+          # build_revision: 89a0f6d1649e256223695c8291426aea528354d1
+          # token: ***
+      - name: Archive
+        run: tar --dereference --hard-dereference --directory _site/ -cvf artifact.tar .
+      - name: Upload
+        uses: actions/upload-artifact@v2
+        with:
+          name: github-pages
+          path: ./artifact.tar
+          if-no-files-found: warn
