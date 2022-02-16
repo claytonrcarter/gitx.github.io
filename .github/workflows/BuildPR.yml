@@ -20,7 +20,7 @@ jobs:
       - name: Build
         uses: actions/jekyll-build-pages@v1
         env:
-          PAGES_REPO_NWO: gitx/gitx
+          GITHUB_REPOSITORY: gitx/gitx
         with:
           source: .
           destination: ./_site
