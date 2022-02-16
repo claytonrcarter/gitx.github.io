@@ -6,4 +6,4 @@ markdown: kramdown
 permalink: pretty
 
 # Which project should {{ site.github.* }} refer to?
-repository: gitx/gitx
+# repository: gitx/gitx
