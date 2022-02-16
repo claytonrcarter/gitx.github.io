@@ -4,6 +4,9 @@
         <title>{{ site.github.project_title }} Appcast Feed</title>
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
+
+<pre>{{ site.github }}</pre>
+
         {% for release in site.github.releases %}
             {% if release.prerelease and page.include_prereleases != true %}{% continue %}{% endif %}
 
