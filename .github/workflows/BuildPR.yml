@@ -16,6 +16,7 @@ jobs:
           cat _config.yml
           git remote remove origin
           git remote -v
+          set
       - name: Build
         uses: actions/jekyll-build-pages@v1
         env:
