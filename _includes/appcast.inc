@@ -5,6 +5,9 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
 
+<pre>{{ site.repository }}</pre>
+<pre>{{ site.title }}</pre>
+
         {% for release in site.github.releases %}
             {% if release.prerelease and page.include_prereleases != true %}{% continue %}{% endif %}
 
