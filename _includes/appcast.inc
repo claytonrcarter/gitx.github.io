@@ -5,6 +5,7 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
 
+<pre>{{ site.config }}</pre>
 <pre>{{ site.github }}</pre>
 
         {% for release in site.github.releases %}
