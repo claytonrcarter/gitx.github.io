@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2.4.0
+      - name: Debug
+        run: cat _config.yml && git remote remove origin
       - name: Build
         uses: actions/jekyll-build-pages@v1
         env:
