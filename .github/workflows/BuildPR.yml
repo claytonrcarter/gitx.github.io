@@ -14,6 +14,7 @@ jobs:
       - name: Debug
         run: |
           cat _config.yml
+          git remote remove origin
           git remote -v
       - name: Build
         uses: actions/jekyll-build-pages@v1
