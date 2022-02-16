@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.4.0
       - name: Build
-        uses: actions/jekyll-build-pages@1.0.1
+        uses: actions/jekyll-build-pages@v1
         with:
           source: .
           destination: ./_site
